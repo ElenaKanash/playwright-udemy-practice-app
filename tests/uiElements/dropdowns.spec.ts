@@ -18,7 +18,7 @@ test.describe("List and dropdowns", () => {
     await test.expect(optionList).toHaveText(['Light', 'Dark', 'Cosmic', 'Corporate']);
     await optionList.filter({ hasText: 'Cosmic' }).click();
 
-    await expect(header).toHaveCSS('background-color', rgb(50, 50, 89));
+    await expect(header).toHaveCSS('background-color', 'rgb(50, 50, 89)');
   });
 
   test("Dropdown menu: check all options", async ({ page }) => {
