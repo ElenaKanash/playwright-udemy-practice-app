@@ -5,7 +5,7 @@ test.describe("Sliders", () => {
     await page.goto("http://localhost:4200/");
   });
 
-  test("Update slider attribute", async ({ page }) => {
+  test("Update slider html attribute", async ({ page }) => {
     const tempBox = page.locator('[tabtitle="Temperature"] ngx-temperature-dragger');
     const tempGauge = page.locator('[tabtitle="Temperature"] ngx-temperature-dragger circle');
     //update attributes of the tempGauge to max value
