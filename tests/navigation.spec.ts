@@ -14,3 +14,5 @@ test("Navigation menu", async ({ page }) => {
   await navigateTo.tooltipPage();
   await navigateTo.smartTablePage();
 });
+
+
