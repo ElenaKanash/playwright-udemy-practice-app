@@ -2,6 +2,9 @@
 
 The original repo is here: https://github.com/akveo/ngx-admin
 
+The application code is in the branch ```master```
+The Playwright Autotests code is in the branch ```tests```
+
 **How to start working in this project?**
 
 Clone repository to your machine.
