@@ -11,3 +11,5 @@ Run command ```npm install```
 Run command ```npm start``` to open the application
 
 Open your browser on ```http://localhost:4200/```
+
+Run autotests  from the ```tests branch```
