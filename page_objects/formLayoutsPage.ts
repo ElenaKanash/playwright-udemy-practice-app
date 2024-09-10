@@ -1,9 +1,10 @@
 import { Page } from "@playwright/test";
+import { HelperBase } from "./helperBase";
 
-export class FormLayoutsPage {
-  private readonly page: Page;
+export class FormLayoutsPage extends HelperBase {
+
   constructor(page: Page) {
-    this.page = page;
+    super(page);
   }
   /**
    * This method fill out the Inline form with user details
@@ -14,11 +15,13 @@ export class FormLayoutsPage {
   async submitInlineFormWithParametrs(name: string, email: string, rememberMe: boolean) {
     const inlineForm = this.page.locator("nb-card", { hasText: "Inline form" });
     await inlineForm.getByRole("textbox", { name: "Jane Doe" }).fill(name);
-    await inlineForm.getByRole("textbox", { name: "Email" }).fill(email);
+    await inlineForm.getByRole("textbox", { name: "Email" }).fill(email);   
 
     if (rememberMe === true)  await inlineForm.getByRole("checkbox").check({ force: true });
 
     await inlineForm.getByRole("button").click();
+    await this.waitForNumberOfSeconds(2);
+
   }
 
 
@@ -28,5 +31,6 @@ export class FormLayoutsPage {
     await usingTheGridForm.getByRole("textbox", { name: "Password" }).fill(password);
     await usingTheGridForm.getByRole("radio", { name: optionText }).check({ force: true });
     await usingTheGridForm.getByRole("button").click();
+    await this.waitForNumberOfSeconds(2);
   }
 }
