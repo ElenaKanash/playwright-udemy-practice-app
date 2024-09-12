@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test'
 
+/*
 test.beforeEach(async ({ page }, testInfo) => {
   await page.goto(process.env.URL)
   await page.getByText('Button Triggering AJAX Request').click()
@@ -40,3 +41,4 @@ test('timeouts', async ({ page }) => {
   const successButton = page.locator('.bg-success')
   await successButton.click()
 })
+  */

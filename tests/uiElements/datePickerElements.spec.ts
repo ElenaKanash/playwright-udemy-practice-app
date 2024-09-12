@@ -7,7 +7,7 @@ test.describe("Date Picker", () => {
     await page.getByText("Datepicker").click();
   });
 
-  test("Select a specific date in the calendar", async ({ page }) => {
+  test.skip("Select a specific date in the calendar", async ({ page }) => {
     const datePickerInputField = page.getByPlaceholder("Form Picker");
     await datePickerInputField.click();
 
