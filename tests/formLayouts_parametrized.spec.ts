@@ -17,9 +17,10 @@ test("Submit Form Layouts with parametrized methods", async ({ page }) => {
   const randomPasword = faker.string.alphanumeric({ length: { min: 8, max: 15 } });
 
   await pm.navigateTo().formLayoutsPage();
-  await pm.onFormLayoutsPage().submitInlineFormWithParametrs('Ivan Ivanov', 'ivanov@test.com', false);
-  await pm.onFormLayoutsPage().submitInlineFormWithParametrs(randomFullName, randomEmail, true);  
-  await pm.onFormLayoutsPage().submitUsingTheGridFormWithParameters('test@test.com', '12345678', 'Option 1');
+  await pm.onFormLayoutsPage().submitInlineFormWithParametrs('Ivan Ivanov', 'ivanov@test.com', false);  
+  await pm.onFormLayoutsPage().submitInlineFormWithParametrs(randomFullName, randomEmail, true);    
+  await pm.onFormLayoutsPage().submitUsingTheGridFormWithParameters('test@test.com', '12345678', 'Option 1'); 
   await pm.onFormLayoutsPage().submitUsingTheGridFormWithParameters(randomEmail, randomPasword, 'Option 2');
+  await page.screenshot({path: 'screenshots/formsLayoutsPage.png'});
   
 })
