@@ -4,7 +4,7 @@ import { DatePickerPage } from "../page_objects/datePickerPage"; */
 import { PageManager } from "../page_objects/pageManagerPage";
 
 test.beforeEach(async ({ page }) => {
-  await page.goto("http://localhost:4200/");
+  await page.goto("/");
 });
 
 test("Select Common DatePicker Date From Today", async ({ page }) => {

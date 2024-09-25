@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 
 test.describe("Web Tables", () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto("http://localhost:4200/");
+    await page.goto("/");
     await page.getByText("Tables & Data").click();
     await page.getByText("Smart Table").click();
   });

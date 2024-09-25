@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 
 test.describe("Sliders", () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto("http://localhost:4200/");
+    await page.goto("/");
   });
 
   test("Update slider html attribute", async ({ page }) => {

@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 
 test.describe("List and dropdowns", () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto("http://localhost:4200/");
+    await page.goto("/");
   });
 
   test("Dropdown menu: select one option", async ({ page }) => {
